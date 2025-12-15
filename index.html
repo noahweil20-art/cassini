@@ -3,16 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cassini — teste</title>
-  <style>
-    /* CSS embutido de teste: se isto aparecer, o navegador está renderizando estilos */
-    body{font-family:Arial,Helvetica,sans-serif;background:#0b1220;color:#e6f0ff;margin:0;padding:1.5rem}
-    header{margin-bottom:1rem}
-    h1{font-size:2.2rem;color:#ffd479;margin:0}
-    .hero{background:linear-gradient(180deg,rgba(255,255,255,0.03),transparent);padding:1rem;border-radius:8px}
-    .saturno{max-width:320px;display:block;margin:0.7rem 0;border-radius:6px;box-shadow:0 6px 20px rgba(0,0,0,0.4)}
-    footer{margin-top:1.2rem;font-size:0.9rem;color:#c9d6ff88}
-  </style>
+  <title>Cassini</title>
+
+  <!-- CSS: caminho relativo (sem barra inicial) -->
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <header>
@@ -23,12 +17,12 @@
   <main>
     <section class="hero">
       <h2>Bem-vindo(a)</h2>
-      <p>Projeto de exemplo com recursos relativos (teste).</p>
+      <p>Projeto de exemplo com recursos relativos.</p>
 
       <figure>
-        <!-- Imagem pública de teste — deve aparecer se a conexão estiver OK -->
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn_during_Equinox.jpg" class="saturno" alt="Saturno">
-        <figcaption>Saturno — imagem de exemplo (teste)</figcaption>
+        <!-- Imagem: caminho relativo (sem barra inicial) -->
+        <img src="./img/saturno.jpg" class="saturno" alt="Saturno">
+        <figcaption>Saturno — imagem de exemplo</figcaption>
       </figure>
     </section>
   </main>
@@ -37,9 +31,7 @@
     <p>© Cassini</p>
   </footer>
 
-  <!-- Script simples de teste -->
-  <script>
-    console.log('Script de teste carregado');
-  </script>
+  <!-- Script: caminho relativo (sem barra inicial) -->
+  <script src="./js/script.js"></script>
 </body>
 </html>
