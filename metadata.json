@@ -1,0 +1,5 @@
+{
+  "name": "Cassino Royal Mock",
+  "description": "Um cassino de simulação com Slots, Blackjack e um assistente de IA 'Pit Boss'. Aposte com dinheiro fictício e divirta-se.",
+  "requestFramePermissions": []
+}
