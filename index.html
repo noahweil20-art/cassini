@@ -4,34 +4,60 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cassini</title>
-
-  <!-- CSS: caminho relativo (sem barra inicial) -->
-  <link rel="stylesheet" href="./style.css">
+  <style>
+    /* Estilos embutidos para garantir visual mesmo sem style.css */
+    :root{--bg:#0b1220;--card:#071022;--accent:#ffd479;--muted:#aebed6}
+    html,body{height:100%;margin:0;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#05060a 0%, #071022 100%);color:#e6f0ff}
+    .container{max-width:920px;margin:2rem auto;padding:1.2rem}
+    header h1{margin:0;font-size:2.4rem;color:var(--accent);letter-spacing:0.3px}
+    header p{margin:0.3rem 0 1rem;color:var(--muted)}
+    .hero{background:rgba(255,255,255,0.02);padding:1rem;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,0.5)}
+    .hero h2{margin:0 0 .4rem;color:#fff}
+    .hero p{margin:.2rem 0 1rem;color:var(--muted)}
+    figure{margin:0}
+    .saturno{max-width:100%;height:auto;border-radius:8px;display:block;margin:0.6rem 0;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+    footer{margin-top:1rem;color:#bfcde6;font-size:0.9rem}
+    /* responsivo */
+    @media (max-width:640px){.container{margin:1rem;padding:.8rem} header h1{font-size:1.6rem}}
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Cassini</h1>
-    <p>Explorando o espaço — demonstração</p>
-  </header>
+  <div class="container">
+    <header>
+      <h1>Cassini</h1>
+      <p>Explorando o espaço — demonstração</p>
+    </header>
 
-  <main>
-    <section class="hero">
-      <h2>Bem-vindo(a)</h2>
-      <p>Projeto de exemplo com recursos relativos.</p>
+    <main>
+      <section class="hero">
+        <h2>Bem-vindo(a)</h2>
+        <p>Projeto de exemplo com recursos relativos.</p>
 
-      <figure>
-        <!-- Imagem: caminho relativo (sem barra inicial) -->
-        <img src="./img/saturno.jpg" class="saturno" alt="Saturno">
-        <figcaption>Saturno — imagem de exemplo</figcaption>
-      </figure>
-    </section>
-  </main>
+        <figure>
+          <!-- Tenta carregar imagem local; se não existir faz fallback para uma URL pública -->
+          <img src="./img/saturno.jpg"
+               class="saturno"
+               alt="Saturno"
+               onerror="if(!this._tried){this._tried=true;this.src='https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn_during_Equinox.jpg';}">
+          <figcaption>Saturno — imagem de exemplo</figcaption>
+        </figure>
+      </section>
+    </main>
 
-  <footer>
-    <p>© Cassini</p>
-  </footer>
+    <footer>
+      <p>© Cassini</p>
+    </footer>
+  </div>
 
-  <!-- Script: caminho relativo (sem barra inicial) -->
-  <script src="./js/script.js"></script>
+  <script>
+    // JS embutido simples (substitui js/script.js enquanto não existir)
+    (function(){
+      console.log('Cassini — script embutido carregado');
+      // exemplo: realçar o título quando a página carrega
+      try {
+        document.querySelector('header h1').style.opacity = '0.98';
+      } catch(e) { /* silencioso */ }
+    })();
+  </script>
 </body>
 </html>
